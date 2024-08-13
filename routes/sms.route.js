@@ -9,6 +9,6 @@ const {
 const protect = require('../middlewares/auth')
 
 
-router.post('/send/sms', protect, sendSms)
+router.post('/send', protect, sendSms)
 
 module.exports = router
