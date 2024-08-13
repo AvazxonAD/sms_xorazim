@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const pool = require("./config/db");
 const asyncHandler = require("./middlewares/asyncHandler");
 const ErrorResponse = require("./utils/errorResponse");
 const axios = require('axios')
