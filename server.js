@@ -76,10 +76,6 @@ app.post('/sms/send', protect, asyncHandler(async (req, res, next) => {
                 phone: client.phone,
                 success: true
             })
-            await pool.query(
-                `INSERT INTO reports (client_id, report, senddate) VALUES ($1, $2, $3)`,
-                [client.id, sendMessage, new Date()]
-            );
         }
 
         if(response.status !== 200){
